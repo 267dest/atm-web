@@ -1,9 +1,8 @@
 package th.ac.ku.atm.data;
 
+
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.stereotype.Repository;
-
 import org.springframework.stereotype.Repository;
 import th.ac.ku.atm.model.Customer;
 
@@ -45,7 +44,7 @@ public class CustomerRepository {
         jdbcTemplate.update(query);
     }
 
-    class CustomerRowMapper implements RowMapper<Customer>{
+    class CustomerRowMapper implements RowMapper<Customer> {
         @Override
         public Customer mapRow(ResultSet resultSet, int i)
                 throws SQLException {

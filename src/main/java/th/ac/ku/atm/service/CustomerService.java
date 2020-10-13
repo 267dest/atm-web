@@ -6,14 +6,15 @@ import org.springframework.stereotype.Service;
 import th.ac.ku.atm.data.CustomerRepository;
 import th.ac.ku.atm.model.Customer;
 
-
+import javax.annotation.PostConstruct;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
 @Service
 public class CustomerService {
 
-    private final CustomerRepository repository;
+    private CustomerRepository repository;
 
     public CustomerService(CustomerRepository repository) {
         this.repository = repository;
@@ -26,7 +27,7 @@ public class CustomerService {
         repository.save(customer);
     }
 
-    public List<Customer> getCustomers() {
+    public List<Customer> getCustomerList() {
         return repository.findAll();
     }
 

@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import th.ac.ku.atm.model.Customer;
 
 @Repository
-public interface CustomerRepository extends JpaRepository<Customer, Integer>{
+public interface CustomerRepository extends JpaRepository<Customer, Integer> {
 
 }

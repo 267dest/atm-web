@@ -5,6 +5,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Customer {
+
     @Id
     private int id;
 
@@ -23,8 +24,16 @@ public class Customer {
         return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getPin() {
@@ -33,5 +42,14 @@ public class Customer {
 
     public void setPin(String pin) {
         this.pin = pin;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", pin='" + pin + '\'' +
+                '}';
     }
 }
